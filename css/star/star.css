@@ -1,0 +1,19 @@
+.star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(star.svg);
+    background-size: 200% 100%;
+}
+
+    .star_selected {
+        background-position: -100% 0;
+    }
+
+    .star:hover {
+        cursor: pointer;
+    }
+
+    .star__input {
+        display: none;
+    }

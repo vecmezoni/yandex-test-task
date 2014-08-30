@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Задание Яндекс</title>
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+        <script src="js/component.js"></script>
+        <script src="js/template.js"></script>
+        <script src="js/star.js"></script>
+    </head>
+    <body>
+        <script type="text/html" class="js-star-template">
+            <label class="js-star star">
+                <input type="radio" class="js-star-input star__input" name="{name}" value="{value}"/>
+            </label>
+        </script>
+        <div class="js-component-stars"></div>
+        <script>
+            var starTemplate = document.querySelector('.js-star-template').innerHTML;
+
+            new yandex.Stars(document.querySelector('.js-component-stars'), 'rating', {
+                star: 'js-star',
+                starInput: 'js-star-input',
+                selected : 'star_selected'
+            }, starTemplate, 5);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="32"
+     height="16">
+    <defs>
+        <linearGradient id="a" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#d5d5d5"/>
+          <stop offset="100%" stop-color="#717171"/>
+        </linearGradient>
+        <linearGradient id="b" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#fff600"/>
+            <stop offset="100%" stop-color="#ff6c00"/>
+        </linearGradient>
+        <path id="star"
+              d="M 8.100 11.700
+				L 13.096 15.377
+				L 11.143 9.489
+				L 16.184 5.873
+				L 9.981 5.911
+				L 8.100 0.000
+				L 6.219 5.911
+				L 0.016 5.873
+				L 5.057 9.489
+				L 3.104 15.377
+				L 8.100 11.700"/>
+     </defs>
+    <use xlink:href="#star" fill="url(#a)" x="0" y="0"/>
+    <use xlink:href="#star" fill="url(#b)" x="16" y="0"/>
+</svg>
