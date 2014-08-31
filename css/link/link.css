@@ -1,0 +1,15 @@
+.link {
+    color: #0070ed;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+    .link:hover {
+        color: red;
+    }
+
+    .link_pseudo {
+        color: #353434;
+        border-bottom-style: dashed;
+    }

@@ -14,82 +14,116 @@
         <script src="js/browsers.js"></script>
     </head>
     <body class="page">
-        <script type="text/html" class="js-stars-template">
-            <label class="js-stars-item star">
-                <input type="radio" class="js-stars-input star__input" name="{name}" value="{value}"/>
-            </label>
-        </script>
-        <div class="js-stars"></div>
 
-        <script>
-            new yandex.Stars(document.querySelector('.js-stars'), 'rating', {
-                star: 'js-stars-item',
-                starInput: 'js-stars-input',
-                selected : 'star_selected'
-            }, '.js-stars-template', 5);
-        </script>
+        <h2>Тестовое задание для верстальщика</h2>
+        <ol>
+            <li><p>Напишите небольшой текст на важную для вас тему, связанную с профессией. Сверстайте его в начале задания.</p></li>
+            <li><p>Сверстайте контрол оценки и показа рейтинга</p>
+                <script type="text/html" class="js-stars-template">
+                    <label class="js-stars-item star">
+                        <input type="radio" class="js-stars-input star__input" name="{name}" value="{value}"/>
+                    </label>
+                </script>
+                <div class="js-stars"></div>
+                <script>
+                    new yandex.Stars(document.querySelector('.js-stars'), 'rating', {
+                        star: 'js-stars-item',
+                        starInput: 'js-stars-input',
+                        selected : 'star_selected'
+                    }, '.js-stars-template', 5);
+                </script>
+                <p>Практически все наши контролы должны быть очень гибкими к окружающему пространству, должны уметь располагаться на любом фоне и при желании легко менять свой "скин". Учитывайте это в этом и других заданиях.
+                Обратите внимание, что контрол должен не только выставлять оценку, но и показывать текущую.</p></li>
+            <li>
+                <p>Сверстайте прогресс-бар</p>
+                <div class="progress-bar">
+                    <div class="progress-bar__progress">20%</div>
+                    <div class="progress-bar__bar"></div>
+                </div>
+            </li>
+            <li><p>Сверстайте кнопку</p>
+                <button type="button" class="button">Кнопка</button><br/>
+                <input type="button" class="button" value="Кнопка"/><br/>
+                <a href="javascript:void(0)" class="button">Кнопка</a><br/>
+                <p>Пожалуйста, учитывайте, что эта кнопка должна быть кнопкой-на-все-случаи-жизни. Сделайте несколько примеров кнопки в различном окружении и различном html-представлении.</p></li>
+            <li><p>Сверстайте список из иконок</p>
+                <ul class="js-browsers browsers">
+                    <li class="browser browser_first">
+                        <img class="js-browsers-icon browser__icon" src="css/browser/chrome.png"/>
+                        <span class="browser__alt browser__alt_chrome">ro</span>
+                    </li>
+                    <li class="browser">
+                        <img class="js-browsers-icon browser__icon" src="css/browser/firefox.png"/>
+                        <span class="browser__alt browser__alt_firefox">Firefox</span>
+                    </li>
+                    <li class="browser">
+                        <img class="js-browsers-icon browser__icon" src="css/browser/opera.png"/>
+                        <span class="browser__alt browser__alt_opera">Opera</span>
+                    </li>
+                    <li class="browser">
+                        <img class="js-browsers-icon browser__icon" src="css/browser/safari.png"/>
+                        <span class="browser__alt browser__alt_safari">Safari</span>
+                    </li>
+                    <li class="browser browser_last">
+                        <img class="js-browsers-icon browser__icon"  src="css/browser/ie.png"/>
+                        <span class="browser__alt browser__alt_ie">Internet<br/>Explorer</span>
+                    </li>
+                </ul>
 
-        <div class="progress-bar">
-            <div class="progress-bar__progress">20%</div>
-            <div class="progress-bar__bar"></div>
-        </div>
+                <script>
+                    new yandex.Browsers(document.querySelector('.js-browsers'), 'browsers', {
+                        icon: 'js-browsers-icon'
+                    });
+                </script>
+                <p>
+                Список должен занимать всю ширину родителя, расстояние между последней иконкой и предпоследней должно занимать все свободное пространство. Иконки должны быть прозрачными (png24).
+                В случае если пользователь отключил картинки или они по какой-то причине не загрузились, интерфейс должен отреагировать на это оформленным текстом.  </p>
+                <div class="js-browsers-broken browsers">
+                    <div class="browser browser_first">
+                        <img class="js-browsers-icon browser__icon" src="foobar"/>
+                        <span class="browser__alt browser__alt_chrome">ro</span>
+                    </div>
+                    <div class="browser">
+                        <img class="js-browsers-icon browser__icon" src="foobar"/>
+                        <span class="browser__alt browser__alt_firefox">Firefox</span>
+                    </div>
+                    <div class="browser">
+                        <img class="js-browsers-icon browser__icon" src="foobar"/>
+                        <span class="browser__alt browser__alt_opera">Opera</span>
+                    </div>
+                    <div class="browser">
+                        <img class="js-browsers-icon browser__icon" src="foobar"/>
+                        <span class="browser__alt browser__alt_safari">Safari</span>
+                    </div>
+                    <div class="browser browser_last">
+                        <img class="js-browsers-icon browser__icon" src="foobar"/>
+                        <span class="browser__alt browser__alt_ie">Internet<br/>Explorer</span>
+                    </div>
+                </div>
 
-        <div class="js-browsers browsers">
-            <div class="browser browser_first">
-                <img class="js-browsers-icon browser__icon" src="css/browser/chrome.png"/>
-                <span class="browser__alt browser__alt_chrome">ro</span>
-            </div>
-            <div class="browser">
-                <img class="js-browsers-icon browser__icon" src="css/browser/firefox.png"/>
-                <span class="browser__alt browser__alt_firefox">Firefox</span>
-            </div>
-            <div class="browser">
-                <img class="js-browsers-icon browser__icon" src="css/browser/opera.png"/>
-                <span class="browser__alt browser__alt_opera">Opera</span>
-            </div>
-            <div class="browser">
-                <img class="js-browsers-icon browser__icon" src="css/browser/safari.png"/>
-                <span class="browser__alt browser__alt_safari">Safari</span>
-            </div>
-            <div class="browser browser_last">
-                <img class="js-browsers-icon browser__icon"  src="css/browser/ie.png"/>
-                <span class="browser__alt browser__alt_ie">Internet<br/>Explorer</span>
-            </div>
-        </div>
-
-        <script>
-            new yandex.Browsers(document.querySelector('.js-browsers'), 'browsers', {
-                icon: 'js-browsers-icon'
-            });
-        </script>
-
-        <div class="js-browsers-broken browsers">
-            <div class="browser browser_first">
-                <img class="js-browsers-icon browser__icon" src=""/>
-                <span class="browser__alt browser__alt_chrome">ro</span>
-            </div>
-            <div class="browser">
-                <img class="js-browsers-icon browser__icon" src=""/>
-                <span class="browser__alt browser__alt_firefox">Firefox</span>
-            </div>
-            <div class="browser">
-                <img class="js-browsers-icon browser__icon" src=""/>
-                <span class="browser__alt browser__alt_opera">Opera</span>
-            </div>
-            <div class="browser">
-                <img class="js-browsers-icon browser__icon" src=""/>
-                <span class="browser__alt browser__alt_safari">Safari</span>
-            </div>
-            <div class="browser browser_last">
-                <img class="js-browsers-icon browser__icon" src=""/>
-                <span class="browser__alt browser__alt_ie">Internet<br/>Explorer</span>
-            </div>
-        </div>
-
-        <script>
-            new yandex.Browsers(document.querySelector('.js-browsers-broken'), 'browsers-broken', {
-                icon: 'js-browsers-icon'
-            });
-        </script>
+                <script>
+                    new yandex.Browsers(document.querySelector('.js-browsers-broken'), 'browsers-broken', {
+                        icon: 'js-browsers-icon'
+                    });
+                </script>
+            </li>
+            <li>
+                <p>Сверстайте текст</p>
+                <article class="article">
+                    <h2 class="article__title">Тема: «Сюжетный анапест: основные&nbsp;моменты»</h2>
+                    <div class="article__columns">
+                        <p class="article__paragraph">Нельзя восстановить истинной хронологической последовательности событий, потому что мелькание мыслей параллельно. Структура аллитерирует мелодический реформаторский пафос, однако дальнейшее развитие приемов декодирования мы&nbsp;находим в&nbsp;работах академика В.Виноградова. Аллюзия наблюдаема. Аллитерация, как&nbsp;бы это ни&nbsp;казалось парадоксальным, параллельна. Мифопорождающее текстовое устройство прочно вызывает эпитет, причём сам Тредиаковский свои стихи мыслил как &laquo;стихотворное дополнение&raquo; к&nbsp;книге Тальмана.</p>
+                        <p class="article__paragraph">Речевой акт традиционно осознаёт музыкальный дольник, но&nbsp;не&nbsp;рифмами. Различное расположение просветляет мелодический образ, таким образом постепенно смыкается с&nbsp;сюжетом. Силлабо-тоника, в&nbsp;первом приближении, просветляет мелодический ямб, таким образом в&nbsp;некоторых случаях образуются рефрены, кольцевые композиции, анафоры.</p>
+                        <p class="article__paragraph">Представленный лексико-семантический анализ является психолингвистическим в&nbsp;своей основе, но&nbsp;мифопорождающее текстовое устройство аллитерирует мифологический генезис свободного стиха, об&nbsp;этом свидетельствуют краткость и&nbsp;завершенность формы, бессюжетность, своеобразие тематического развертывания.</p>
+                        <p class="article__paragraph">Драма, по&nbsp;определению отражает брахикаталектический стих, хотя в&nbsp;существование или актуальность этого он&nbsp;не&nbsp;верит, а&nbsp;моделирует собственную реальность. Лексика осознаёт литературный палимпсест, об&nbsp;этом свидетельствуют краткость и&nbsp;завершенность формы, бессюжетность, своеобразие тематического развертывания.</p>
+                        <ul class="list">
+                            <li class="list__item">Курит ли трупка мой</li>
+                            <li class="list__item"><a href="javascript:void(0)" class="link">из трупка тфой пихтишь</a></li>
+                            <li class="list__item"><span class="link link_pseudo">Или мой кафе пил</span></li>
+                            <li class="list__item">тфой в щашешка сидишь</li>
+                        </ul>
+                    </div>
+                </article>
+        </ol>
     </body>
 </html>

@@ -29,10 +29,23 @@ var yandex = {};
 
     if (!(document.createElementNS &&
         document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect)) {
-        document.documentElement.className = document.documentElement.className ?
-            document.documentElement.className + ' no-svg' :
-            'no-svg';
+        document.documentElement.classList.add('no-svg');
     }
+
+    var fontChecker = new Image();
+
+    var handler = function() {
+        document.documentElement.classList.add('font-loaded');
+    };
+
+    if (fontChecker.addEventListener) {
+        fontChecker.addEventListener('error', handler);
+    } else {
+        fontChecker.attachEvent('onerror', handler);
+    }
+
+    fontChecker.src = './css/ptsans.woff';
+
 
 })(window, yandex);
 

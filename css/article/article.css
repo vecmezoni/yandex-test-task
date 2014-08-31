@@ -1,0 +1,30 @@
+.article {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+    .font-loaded .article {
+        font-family: 'PT Sans', Arial, sans-serif;
+    }
+
+    .article__title {
+        font-size: 24px;
+        line-height: 0.875;
+        font-weight: normal;
+        margin: 0 0 25px;
+        width: 50%;
+    }
+
+    .article__columns {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 50px;
+        padding-right: 90px;
+        margin-left: -20px;
+    }
+
+    .article__paragraph {
+        margin: 0 0 20px;
+        text-indent: 15px;
+        padding-left: 20px;
+    }
