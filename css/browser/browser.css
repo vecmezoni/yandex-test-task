@@ -1,3 +1,13 @@
+.browsers {
+    padding: 0;
+}
+
+    .browsers:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
 .browser {
     position: relative;
     display: block;

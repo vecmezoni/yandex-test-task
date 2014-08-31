@@ -1,4 +1,9 @@
+@import url(ptsans.css);
 @import url(star/star.css);
 @import url(browser/browser.css);
 @import url(page/page.css);
 @import url(progress-bar/progress-bar.css);
+@import url(button/button.css);
+@import url(article/article.css);
+@import url(list/list.css);
+@import url(link/link.css);
