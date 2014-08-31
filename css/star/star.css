@@ -1,10 +1,17 @@
 .star {
     display: inline-block;
+    position: relative;
+
     width: 16px;
     height: 16px;
+
     background-image: url(star.svg);
     background-size: 200% 100%;
 }
+
+    .no-svg .star {
+        background-image: url(star.png);
+    }
 
     .star_selected {
         background-position: -100% 0;
@@ -15,5 +22,16 @@
     }
 
     .star__input {
-        display: none;
+        /* IE8 doesn't trigger change event on display:none input */
+        /* http://bit.ly/1hFCjSF */
+        clip: rect(0 0 0 0);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
     }
+
+        .star__input:focus {
+            outline: none;
+        }

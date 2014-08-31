@@ -7,7 +7,7 @@ var yandex = {};
         F.prototype = Parent.prototype;
         Child.prototype = new F();
         Child.prototype.constructor = Child;
-        Child.super = Parent.prototype;
+        Child.superclass = Parent.prototype;
     }
 
 
@@ -26,6 +26,13 @@ var yandex = {};
             namespace[component.name] = component;
         }
     };
+
+    if (!(document.createElementNS &&
+        document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect)) {
+        document.documentElement.className = document.documentElement.className ?
+            document.documentElement.className + ' no-svg' :
+            'no-svg';
+    }
 
 })(window, yandex);
 

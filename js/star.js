@@ -4,21 +4,29 @@
         this.number = number;
         this.storageName = 'Stars-' + name;
         this.template = document.querySelector(template).innerHTML;
-        Stars.super.constructor.apply(this, arguments);
+        Stars.superclass.constructor.apply(this, arguments);
     }
+
+    Stars.name = 'Stars';
 
     namespace.component.create(Stars);
 
     Stars.prototype.init = function() {
-        this.element.addEventListener('click', function(event) {
-            var target = event.target;
+        var handler = function(event) {
+            var target = (typeof event.target !== 'undefined') ? event.target : event.srcElement;
             var value = parseInt(target.value, 10);
             if (!target.classList.contains(this.classNames.starInput)) {
                 return;
             }
             this.changeState(this.value === value ? this.value - 1 : value);
             this.save();
-        }.bind(this));
+        }.bind(this);
+
+        if (this.element.addEventListener) {
+            this.element.addEventListener('click', handler);
+        } else {
+            this.element.attachEvent('onclick', handler);
+        }
 
         var result = '';
         for(var i = 0; i < this.number; i++) {
@@ -35,10 +43,10 @@
     Stars.prototype.changeState = function(value) {
         this.value = value;
 
-        Array.prototype.slice.call(this.element.getElementsByClassName(this.classNames.star)).forEach(function(star, index) {
+        Array.prototype.forEach.call(this.element.querySelectorAll(namespace.template.render('.{0}', [this.classNames.star])), function(star, index) {
             star.classList.toggle(this.classNames.selected, index + 1 <= this.value);
             if (index + 1 === this.value) {
-                star.getElementsByClassName(this.classNames.starInput)[0].checked = true;
+                star.querySelector(namespace.template.render('.{0}', [this.classNames.starInput])).checked = true;
             }
         }, this);
     };

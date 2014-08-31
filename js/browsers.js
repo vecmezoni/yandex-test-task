@@ -1,16 +1,27 @@
 (function(window, namespace) {
 
     function Browsers(element, name, classNames) {
-        Browsers.super.constructor.apply(this, arguments);
+        Browsers.superclass.constructor.apply(this, arguments);
     }
+
+    Browsers.name = 'Browsers';
 
     namespace.component.create(Browsers);
 
     Browsers.prototype.init = function() {
-        Array.prototype.slice.call(this.element.getElementsByClassName(this.classNames.icon)).forEach(function(item) {
-            item.addEventListener('error', function() {
-                this.style.display = 'none';
-            });
+        Array.prototype.forEach.call(this.element.querySelectorAll(namespace.template.render('.{0}', [this.classNames.icon])), function(item) {
+
+            var handler = function() {
+                var target = (typeof event.target !== 'undefined') ? event.target : event.srcElement;
+                target.style.display = 'none';
+            };
+
+            if (item.addEventListener) {
+                item.addEventListener('error', handler);
+            } else {
+                item.attachEvent('onerror', handler);
+            }
+
         });
     };
 

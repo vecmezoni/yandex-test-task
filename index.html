@@ -4,7 +4,11 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>Задание Яндекс</title>
         <link rel="stylesheet" type="text/css" href="css/all.css">
-        <script src="js/component.js"></script>
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/all.ie.css">
+        <![endif]-->
+        <script src="js/polyfills.js"></script>
+        <script src="js/main.js"></script>
         <script src="js/template.js"></script>
         <script src="js/star.js"></script>
         <script src="js/browsers.js"></script>
@@ -24,6 +28,11 @@
                 selected : 'star_selected'
             }, '.js-stars-template', 5);
         </script>
+
+        <div class="progress-bar">
+            <div class="progress-bar__progress">20%</div>
+            <div class="progress-bar__bar"></div>
+        </div>
 
         <div class="js-browsers browsers">
             <div class="browser browser_first">
