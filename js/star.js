@@ -3,7 +3,7 @@
     function Stars(element, name, classNames, template, number) {
         this.number = number;
         this.storageName = 'Stars-' + name;
-        this.template = template;
+        this.template = document.querySelector(template).innerHTML;
         Stars.super.constructor.apply(this, arguments);
     }
 

@@ -7,22 +7,80 @@
         <script src="js/component.js"></script>
         <script src="js/template.js"></script>
         <script src="js/star.js"></script>
+        <script src="js/browsers.js"></script>
     </head>
-    <body>
-        <script type="text/html" class="js-star-template">
-            <label class="js-star star">
-                <input type="radio" class="js-star-input star__input" name="{name}" value="{value}"/>
+    <body class="page">
+        <script type="text/html" class="js-stars-template">
+            <label class="js-stars-item star">
+                <input type="radio" class="js-stars-input star__input" name="{name}" value="{value}"/>
             </label>
         </script>
-        <div class="js-component-stars"></div>
-        <script>
-            var starTemplate = document.querySelector('.js-star-template').innerHTML;
+        <div class="js-stars"></div>
 
-            new yandex.Stars(document.querySelector('.js-component-stars'), 'rating', {
-                star: 'js-star',
-                starInput: 'js-star-input',
+        <script>
+            new yandex.Stars(document.querySelector('.js-stars'), 'rating', {
+                star: 'js-stars-item',
+                starInput: 'js-stars-input',
                 selected : 'star_selected'
-            }, starTemplate, 5);
+            }, '.js-stars-template', 5);
+        </script>
+
+        <div class="js-browsers browsers">
+            <div class="browser browser_first">
+                <img class="js-browsers-icon browser__icon" src="css/browser/chrome.png"/>
+                <span class="browser__alt browser__alt_chrome">ro</span>
+            </div>
+            <div class="browser">
+                <img class="js-browsers-icon browser__icon" src="css/browser/firefox.png"/>
+                <span class="browser__alt browser__alt_firefox">Firefox</span>
+            </div>
+            <div class="browser">
+                <img class="js-browsers-icon browser__icon" src="css/browser/opera.png"/>
+                <span class="browser__alt browser__alt_opera">Opera</span>
+            </div>
+            <div class="browser">
+                <img class="js-browsers-icon browser__icon" src="css/browser/safari.png"/>
+                <span class="browser__alt browser__alt_safari">Safari</span>
+            </div>
+            <div class="browser browser_last">
+                <img class="js-browsers-icon browser__icon"  src="css/browser/ie.png"/>
+                <span class="browser__alt browser__alt_ie">Internet<br/>Explorer</span>
+            </div>
+        </div>
+
+        <script>
+            new yandex.Browsers(document.querySelector('.js-browsers'), 'browsers', {
+                icon: 'js-browsers-icon'
+            });
+        </script>
+
+        <div class="js-browsers-broken browsers">
+            <div class="browser browser_first">
+                <img class="js-browsers-icon browser__icon" src=""/>
+                <span class="browser__alt browser__alt_chrome">ro</span>
+            </div>
+            <div class="browser">
+                <img class="js-browsers-icon browser__icon" src=""/>
+                <span class="browser__alt browser__alt_firefox">Firefox</span>
+            </div>
+            <div class="browser">
+                <img class="js-browsers-icon browser__icon" src=""/>
+                <span class="browser__alt browser__alt_opera">Opera</span>
+            </div>
+            <div class="browser">
+                <img class="js-browsers-icon browser__icon" src=""/>
+                <span class="browser__alt browser__alt_safari">Safari</span>
+            </div>
+            <div class="browser browser_last">
+                <img class="js-browsers-icon browser__icon" src=""/>
+                <span class="browser__alt browser__alt_ie">Internet<br/>Explorer</span>
+            </div>
+        </div>
+
+        <script>
+            new yandex.Browsers(document.querySelector('.js-browsers-broken'), 'browsers-broken', {
+                icon: 'js-browsers-icon'
+            });
         </script>
     </body>
 </html>

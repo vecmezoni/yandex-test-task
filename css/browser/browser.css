@@ -1,0 +1,61 @@
+.browser {
+    position: relative;
+    display: block;
+    float: left;
+    width: 132px;
+    height: 132px;
+    overflow: hidden;
+}
+
+    .browser_last {
+        float: right;
+    }
+
+    .browser_first {
+        clear: left;
+    }
+
+    .browser__icon {
+        width: 132px;
+        height: 132px;
+    }
+
+    .browser__alt {
+        position: relative;
+        display: table-cell;
+        width: inherit;
+        height: inherit;
+        vertical-align: middle;
+        text-align: center;
+        z-index: -1;
+    }
+
+    .browser__alt_chrome {
+        color: #c90000;
+    }
+
+        .browser__alt_chrome:before {
+            content: 'Ch';
+            color: #22a12a;
+        }
+
+        .browser__alt_chrome:after {
+            content: 'me';
+            color: #f9d411;
+        }
+
+    .browser__alt_firefox {
+        color: #f2a414;
+    }
+
+    .browser__alt_opera {
+        color: #c10e0e;
+    }
+
+    .browser__alt_safari {
+        color: #646464;
+    }
+
+    .browser__alt_ie {
+        color: #036da3;
+    }
