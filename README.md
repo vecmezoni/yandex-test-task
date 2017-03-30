@@ -33,4 +33,4 @@
 <br>
 ![columns](http://img-fotki.yandex.ru/get/4714/2776.b/0_60613_ce753157_orig)
 
-__PSD файл задания__: https://yadi.sk/i/bAYU0N1k36r6ua
+__PSD файл задания__: https://yadi.sk/i/GHK7Ohd93GVGVy
