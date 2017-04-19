@@ -1,0 +1,24 @@
+.star
+  display: inline-block
+  margin-bottom: 40px
+  +mob
+    margin-bottom: $indent
+  &__form
+    display: flex
+    flex-direction: row-reverse
+  &__input
+    display: none
+    opacity: 0
+    &:checked ~ .star__label
+      background-position: -100% 0
+  &__label
+    cursor: pointer
+    height: $star-size
+    width: $star-size
+    margin: 0 1px
+    background:
+      image: url(../img/star.svg)
+      size: 200% 100%
+    &:hover,
+    &:hover ~ &
+      background-position: -100% 0

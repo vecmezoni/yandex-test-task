@@ -1,0 +1,45 @@
+.content
+  font-family: $ptsans
+  font-size: 16px
+  line-height: 21px
+  padding: 0 5px
+  +mob
+    padding: 0
+    font-size: 14px
+    line-height: 18px
+  &__title
+    font-size: 1.5em
+    line-height: 0.875
+    font-weight: normal
+    margin: 0 0 1.5em
+    width: 50%
+    margin-bottom: 25px
+    +mob
+      width: 100%
+      margin-bottom: $indent
+  &__columns
+    column-count: 2
+    column-gap: 80px
+    padding-right: 90px
+    +mob
+      column-count: auto
+      padding-right: 0
+  &__paragraph
+    margin: 0 0 1.25em
+    text-indent: .9rem
+    +mob
+      margin-bottom: .5em
+  &-list
+    padding-left: 0
+    list-style: none
+    font-size: .95em
+    +mob
+      padding-left: 20px
+    &__item
+      position: relative
+      &:before
+        content: '—'
+        position: absolute
+        right: 100%
+        bottom: 0
+        margin-right: 0.2em
