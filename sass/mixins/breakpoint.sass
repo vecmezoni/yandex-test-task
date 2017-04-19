@@ -1,0 +1,61 @@
+=breakpoint-min($media-min-width)
+  @media only screen and (min-width: $media-min-width + px)
+    @content
+
+=breakpoint-max($media-max-width)
+  @media only screen and (max-width: $media-max-width + px)
+    @content
+
+=breakpoint-minmax($media-min-width : false, $media-max-width : false)
+  @if ($media-min-width)
+    @if ($media-max-width)
+      @media only screen and (min-width: $media-min-width + px) and (max-width: $media-max-width + px)
+        @content
+    @else
+      +breakpoint-min($media-min-width)
+  @else
+    @if ($media-max-width)
+      +breakpoint-max($media-max-width)
+
+=breakpoint-device-min($device-min-width)
+  @media only screen and (min-device-width: $device-min-width + px)
+    @content
+
+=breakpoint-device-max($device-max-width)
+  @media only screen and (max-device-width: $device-max-width + px)
+    @content
+
+=breakpoint-device-minmax($device-min-width : false, $device-max-width : false)
+  @if ($device-min-width)
+    @if ($device-max-width)
+      @media only screen and (min-device-width: $device-min-width + px) and (max-device-width: $device-max-width + px)
+        @content
+    @else
+      +breakpoint-device-min($device-min-width)
+  @else
+    @if ($device-max-width)
+      +breakpoint-device-max($device-max-width)
+
+=tab
+  +breakpoint-max(1024)
+    @content
+
+=tab-min
+  +breakpoint-min(1025)
+    @content
+
+=mob
+  +breakpoint-max(760)
+    @content
+
+=mob-min
+  +breakpoint-min(761)
+    @content
+
+=land
+  @media screen and (orientation: landscape)
+    @content
+
+=port
+  @media screen and (orientation: portrait)
+    @content

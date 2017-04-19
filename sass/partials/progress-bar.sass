@@ -1,0 +1,31 @@
+.progress-bar
+  display: block
+  position: relative
+  width: 210px
+  height: 13px
+  border-radius: 13px
+  background-color: $light-c
+  box-shadow: inset 0 1px 3px $dark-op
+  margin-bottom: 25px
+  +mob
+    margin-bottom: $indent
+  &:after
+    content: ''
+    height: 100%
+    width: 20%
+    border-radius: inherit
+    background: $progress-c
+    background: linear-gradient($progress-grad)
+    transition: width 1s
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+  &__inner
+    margin: auto
+    font-family: $verdana
+    font-size: 9px
+    text-align: center
+    vertical-align: middle
+    line-height: 13px

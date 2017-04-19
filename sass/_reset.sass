@@ -1,0 +1,93 @@
+html, body
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  -webkit-text-size-adjust: 100%
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+body
+  line-height: 1
+ol, ul
+  list-style: none
+blockquote, q
+  quotes: none
+blockquote, q
+  &:before,
+  &:after
+    content: ''
+    content: none
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+input,
+button,
+textarea
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-appearance: none
+  -webkit-border-radius: 0
+  outline: none
+  border: none
+  box-shadow: none
+  &:focus
+    outline: none
+textarea
+  overflow: auto
+input
+  word-break: normal
+  &:invalid
+    box-shadow: none
+  &[type="number"]
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      opacity: .5
+    -moz-appearance: textfield
+  &[type=search]
+    -webkit-appearance: none
+    border-radius: 0
+    &::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration
+      display: none
+  &::-ms-clear
+    display: none
+select
+  -webkit-appearance: none
+  outline: none
+  -moz-appearance: none
+  text-indent: 0.01px
+  text-overflow: ''
+  -ms-appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  cursor: pointer
+  &::-ms-expand
+    display: none
+a
+  color: inherit
+  text-decoration: none
+a,button, input
+  &:hover
+    cursor: pointer
+img
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%
+h1,h2,h3,h4,h5,h6
+  font-weight: normal
+\::-moz-focus-inner
+  border: 0
+  padding: 0
+
+input[type=number]
+  -moz-appearance: textfield !important
